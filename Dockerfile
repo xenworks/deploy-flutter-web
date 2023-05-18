@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # alpine needs glibc compat to install aws cli v2
-ENV GLIBC_VER "2.34-r0"
+ENV GLIBC_VER "2.35-r1"
 ENV FLUTTER_VERSION "3.10.0-stable"
 ENV FLUTTER_HOME "/opt/flutter"
 ENV PATH=$PATH:${FLUTTER_HOME}/bin
