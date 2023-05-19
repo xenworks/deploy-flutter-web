@@ -18,9 +18,6 @@ RUN apk update && \
         clang \
         cmake \
         ninja-build \
-        pkg-config \
-        libgtk-3-dev \
-        liblzma-dev \
     && curl -ksL https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub \
     && curl -sLO https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-${GLIBC_VER}.apk \
     && curl -sLO https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk \
