@@ -43,6 +43,8 @@ RUN apk update && \
         curl \
     && rm glibc-${GLIBC_VER}.apk \
     && rm glibc-bin-${GLIBC_VER}.apk \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && dart --version \
+    && flutter --version
 
 ENTRYPOINT [ "sh" ]
