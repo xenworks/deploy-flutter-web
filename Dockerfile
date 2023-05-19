@@ -24,7 +24,7 @@ RUN apk-get update \
     && mv /tmp/flutter -T ${FLUTTER_HOME} \
     && rm -rf /tmp/flutter.tar.xz \
     && git config --global --add safe.directory /opt/flutter \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
     && dart --version \
     && flutter --version
 
