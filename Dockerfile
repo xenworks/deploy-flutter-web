@@ -4,7 +4,11 @@ ENV FLUTTER_VERSION "3.10.1-stable"
 ENV FLUTTER_HOME "/opt/flutter"
 ENV PATH=$PATH:${FLUTTER_HOME}/bin
 
-RUN apk update \
+RUN apk-get update \
+    && apt-get install -y \
+        curl \
+        git \
+        build-essential \
     && curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \
     && unzip awscliv2.zip \
     && aws/install \
@@ -20,7 +24,7 @@ RUN apk update \
     && mv /tmp/flutter -T ${FLUTTER_HOME} \
     && rm -rf /tmp/flutter.tar.xz \
     && git config --global --add safe.directory /opt/flutter \
-    && rm -rf /var/cache/apk/* \
+    && rm -rf /var/lib/apt/lists/*
     && dart --version \
     && flutter --version
 
