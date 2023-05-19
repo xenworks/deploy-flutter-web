@@ -4,7 +4,7 @@ ENV FLUTTER_VERSION "3.10.1-stable"
 ENV FLUTTER_HOME "/opt/flutter"
 ENV PATH=$PATH:${FLUTTER_HOME}/bin
 
-RUN apk-get update \
+RUN apt-get update \
     && apt-get install -y \
         curl \
         git \
