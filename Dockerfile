@@ -9,6 +9,7 @@ RUN apt-get update \
         curl \
         git \
         unzip \
+        wget \
         build-essential \
     && curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \
     && unzip awscliv2.zip \
