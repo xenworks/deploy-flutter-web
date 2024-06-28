@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-ENV FLUTTER_VERSION "3.22.0-stable"
+ENV FLUTTER_VERSION "3.22.1-stable"
 ENV FLUTTER_HOME "/opt/flutter"
 ENV PATH=$PATH:${FLUTTER_HOME}/bin
 
